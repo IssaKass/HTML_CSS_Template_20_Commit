@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Commit</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Work+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.1/css/bootstrap.min.css"
+      integrity="sha512-Z/def5z5u2aR89OuzYcxmDJ0Bnd5V1cKqBEbvLOiUNWdg9PQeXVvXLI90SE4QOHGlfLqUnDNVAYyZi8UwUTmWQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css"
+      integrity="sha512-ZnR2wlLbSbr8/c9AgLg3jQPAattCUImNsae6NHYnS9KrIwRdcY9DxFotXhNAKIKbAXlRnujIqUWoXXwqyFOeIQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+  <body>
+    <!-- Toggle Theme Button -->
+    <button class="theme-btn" id="themeBtn">
+      <i class="bi bi-circle-half"></i>
+    </button>
+    <main class="row m-0">
+      <aside id="particles-js" class="hero col-lg-6">
+        <div class="container">
+          <header class="hero__header">
+            <a
+              href="index.html"
+              class="hero__logo text-white text-decoration-none fs-5 fw-bold mb-4 d-flex align-items-center gap-2"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                height="1.5em"
+                viewBox="0 0 640 512"
+              >
+                <path
+                  d="M320 336a80 80 0 1 0 0-160 80 80 0 1 0 0 160zm156.8-48C462 361 397.4 416 320 416s-142-55-156.8-128H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H163.2C178 151 242.6 96 320 96s142 55 156.8 128H608c17.7 0 32 14.3 32 32s-14.3 32-32 32H476.8z"
+                />
+              </svg>
+              Commit
+            </a>
+          </header>
+          <h1 class="hero__heading text-white fs-2 mb-4">
+            Open-source Git client <span>for macOS minimalists</span>
+          </h1>
+          <p class="text-white">
+            Commit is a lightweight Git client you can open from anywhere any
+            time you're ready to commit your work with a single keyboard
+            shortcut. It's fast, beautiful, and completely unnecessary.
+          </p>
+          <form class="hero__form d-flex mt-4 mb-3">
+            <input type="email" placeholder="Email address" required />
+            <button type="submit">
+              Get updates <i class="bi bi-arrow-right-short"></i>
+            </button>
+          </form>
+          <ul
+            class="social list-unstyled d-flex justify-content-center justify-content-lg-start gap-3 mb-5"
+          >
+            <li class="social__item">
+              <a href="#" class="social__link main-link">
+                <i class="bi bi-file-text-fill icon"></i>
+                Documentation
+              </a>
+            </li>
+            <li class="social__item">
+              <a href="#" class="social__link main-link">
+                <i class="bi bi-github icon"></i>
+                Github
+              </a>
+            </li>
+            <li class="social__item">
+              <a href="#" class="social__link main-link">
+                <i class="bi bi-rss-fill icon"></i>
+                RSS
+              </a>
+            </li>
+          </ul>
+          <footer class="hero__footer text-center text-lg-start">
+            <small>
+              Brought to you by &nbsp;
+              <a href="#" class="main-link">
+                <i class="bi bi-twitter icon"></i>
+                IssaKass
+              </a>
+            </small>
+          </footer>
+        </div>
+      </aside>
+      <section class="commits col-lg-6" id="commits">
+        <div class="pattern"></div>
+        <div class="container">
+          <div id="commit01" class="commit pt-5 pb-5 mb-2">
+            <a
+              href="#commit01"
+              class="commit__date text-decoration-none d-block mb-4 fw-bold"
+              ><small>Apr 6, 2023</small></a
+            >
+            <img
+              class="commit__image w-100 mb-4"
+              src="./assets/images/commit-suggestions.webp"
+            />
+            <h4 class="commit__heading mb-3">
+              <a href="#commit01">
+                Commit message suggestions
+                <i class="bi bi-link-45deg icon"></i>
+              </a>
+            </h4>
+            <p class="commit__description">
+              In the latest release, I've added support for commit message and
+              description suggestions via an integration with OpenAI. Commit
+              looks at all of your changes, and feeds that into the machine with
+              a bit of prompt-tuning to get back a commit message that does a
+              surprisingly good job at describing the intent of your changes.
+            </p>
+            <p class="commit__description">
+              It's also been a pretty helpful way to remind myself what the hell
+              I was working on at the end of the day yesterday when I get back
+              to my computer and realize I didn't commit any of my work.
+            </p>
+            <h5 class="commit__improvementheading fw-bold fs-5 mb-4 mt-5">
+              <i class="bi bi-stars icon"></i>
+              Improvements
+            </h5>
+            <ul class="commit__improvements">
+              <li class="commit__improvement mb-3">
+                Added commit message and description suggestions powered by
+                OpenAI
+              </li>
+              <li class="commit__improvement mb-3">
+                Fixed race condition that could sometimes leave you in a broken
+                rebase state
+              </li>
+              <li class="commit__improvement mb-3">
+                Improved active project detection to try and ignore file changes
+                triggered by the system instead of the user
+              </li>
+              <li class="commit__improvement">
+                Fixed bug that sometimes reported the wrong number of changed
+                files
+              </li>
+            </ul>
+          </div>
+          <div id="commit02" class="commit pt-5 pb-5 mb-2">
+            <a
+              href="#commit02"
+              class="commit__date text-decoration-none d-block mb-4 fw-bold"
+              ><small>Mar 17, 2023</small></a
+            >
+            <img
+              class="commit__image w-100 mb-4"
+              src="./assets/images/configuration-files.webp"
+            />
+            <h4 class="commit__heading mb-3">
+              <a href="#commit02">
+                Project configuration files
+                <i class="bi bi-link-45deg icon"></i>
+              </a>
+            </h4>
+            <p class="commit__description">
+              I've added support for creating per-project
+              <code>.commitrc</code> files that override your global settings
+              for that particular project. Went with YAML for these because
+              personally I'm sick of quoting keys in JSON all the time, or
+              accidentally leaving in a trailing comma.
+            </p>
+            <h5 class="commit__improvementheading fw-bold fs-5 mb-4 mt-5">
+              <i class="bi bi-stars icon"></i>
+              Improvements
+            </h5>
+            <ul class="commit__improvements">
+              <li class="commit__improvement mb-3">
+                Added per-project <code>.commitrc</code> configuration files
+              </li>
+              <li class="commit__improvement mb-3">
+                Improved performance when working with projects with large
+                binary files
+              </li>
+              <li class="commit__improvement">
+                Fixed a bug that could cause Commit to crash when autocommitting
+                after deleting a recently active branch
+              </li>
+            </ul>
+          </div>
+          <div id="commit03" class="commit pt-5 pb-5 mb-2">
+            <a
+              href="#commit03"
+              class="commit__date text-decoration-none d-block mb-4 fw-bold"
+              ><small>Mar 6, 2023</small></a
+            >
+            <img
+              class="commit__image w-100 mb-4"
+              src="./assets/images/dark-mode.webp"
+            />
+            <h4 class="commit__heading mb-3">
+              <a href="#commit03">
+                Dark mode support
+                <i class="bi bi-link-45deg icon"></i>
+              </a>
+            </h4>
+            <p class="commit__description">
+              I released this thing last week hoping a couple of people would
+              say "awesome job" and make me feel good about what I'd built but
+              instead I just got a ton of people shaming me on Twitter for being
+              such a horrible person for only shipping a light UI.
+            </p>
+            <h5 class="commit__improvementheading fw-bold fs-5 mb-4 mt-5">
+              <i class="bi bi-stars icon"></i>
+              Improvements
+            </h5>
+            <ul class="commit__improvements">
+              <li class="commit__improvement mb-3">Added dark mode support</li>
+              <li class="commit__improvement mb-3">
+                Improved input field responsiveness when writing a commit
+                message in a project with a large number of changed files
+              </li>
+              <li class="commit__improvement mb-3">
+                Made keyboard shortcut for opening the Commit window
+                customizable
+              </li>
+              <li class="commit__improvement">Deleted my Twitter account</li>
+            </ul>
+          </div>
+          <div id="commit04" class="commit pt-5 pb-5">
+            <a
+              href="#commit04"
+              class="commit__date text-decoration-none d-block mb-4 fw-bold"
+              ><small>Mar 3, 2023</small></a
+            >
+            <img
+              class="commit__image w-100 mb-4"
+              src="./assets/images/first-release.webp"
+            />
+            <h4 class="commit__heading mb-3">
+              <a href="#commit04">
+                Commit v0.1.0
+                <i class="bi bi-link-45deg icon"></i>
+              </a>
+            </h4>
+            <p class="commit__description">
+              Commit is a command palette-style Git client you can pull up from
+              anywhere with a keyboard shortcut that makes it really easy to
+              commit your work. It uses the "last modified" timestamp of the
+              files in all of your projects to automatically know which project
+              you're in the middle of working on, so any time you pull up the UI
+              it's already got the right project selected — you just have to
+              type your commit message, hit <kbd>Cmd</kbd> +
+              <kbd>Enter</kbd> and your changes are captured.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+  <!-- JS -->
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"
+    integrity="sha512-Kef5sc7gfTacR7TZKelcrRs15ipf7+t+n7Zh6mKNJbmW+/RRdCW9nwfLn4YX0s2nO6Kv5Y2ChqgIakaC6PW09A=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  ></script>
+  <script src="./assets/js/particles.js"></script>
+  <script src="./assets/js/main.js"></script>
+</html>
